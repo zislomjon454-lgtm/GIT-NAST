@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="uz">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0b0e14">
+	<title>Portfolio</title>
+	<style>
+		:root { color-scheme: dark; --bg: #0b0e14; --panel: #111720; --line: rgba(255,255,255,.08); --accent: #8ce8be; }
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 50% -15%, #182521, var(--bg) 48%); color: #eef2f5; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+		.wrap { width: min(1080px, calc(100% - 48px)); margin: 0 auto; }
+		header { height: 78px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+		.brand { width: 36px; height: 36px; border: 1px solid rgba(140,232,190,.45); border-radius: 12px; background: linear-gradient(145deg, rgba(140,232,190,.2), transparent); }
+		nav { display: flex; gap: 10px; }
+		nav a { width: 34px; height: 7px; border-radius: 9px; background: #28313b; }
+		nav a:first-child { background: rgba(140,232,190,.65); }
+		main { padding: 26px 0 44px; }
+		section { border: 1px solid var(--line); border-radius: 18px; background: rgba(17,23,32,.78); }
+		#home { height: 370px; margin-bottom: 20px; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(255,255,255,.025), transparent 60%), var(--panel); }
+		#home::after { content: ""; position: absolute; width: 220px; aspect-ratio: 1; right: 10%; top: 50%; transform: translateY(-50%); border: 1px solid rgba(140,232,190,.1); border-radius: 50%; box-shadow: 0 0 0 30px rgba(140,232,190,.025), 0 0 0 60px rgba(140,232,190,.015); }
+		#about, #contact { min-height: 142px; margin-bottom: 20px; }
+		.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+		.projects section { min-height: 180px; background: linear-gradient(145deg, rgba(255,255,255,.025), transparent), var(--panel); }
+		footer { height: 64px; border-top: 1px solid var(--line); }
+		@media (max-width: 650px) { .wrap { width: calc(100% - 32px); } header { height: 68px; } main { padding-top: 18px; } #home { height: 300px; } #home::after { right: -48px; width: 180px; } .projects { grid-template-columns: 1fr; } .projects section { min-height: 140px; } }
+	</style>
+</head>
+<body>
+	<header class="wrap">
+		<div class="brand" aria-hidden="true"></div>
+		<nav aria-label="Portfolio navigatsiyasi">
+			<a href="#home" aria-label="Bosh sahifa"></a>
+			<a href="#about" aria-label="Men haqimda"></a>
+			<a href="#projects" aria-label="Loyihalar"></a>
+			<a href="#contact" aria-label="Aloqa"></a>
+		</nav>
+	</header>
+	<main class="wrap">
+		<section id="home" aria-label="Bosh sahifa"></section>
+		<section id="about" aria-label="Men haqimda"></section>
+		<div class="projects" id="projects" aria-label="Loyihalar">
+			<section aria-label="Loyiha"></section>
+			<section aria-label="Loyiha"></section>
+			<section aria-label="Loyiha"></section>
+		</div>
+		<section id="contact" aria-label="Aloqa"></section>
+	</main>
+	<footer class="wrap"></footer>
+</body>
+</html>
